@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="success.css">
+</head>
+<body>
+    <div class="container">
+        <div class="status-icon success">
+            <!-- Success Icon (Checkmark) -->
+            ✓
+        </div>
+        <h1>Order successfully</h1>
+        <p>Your Order has been processed successfully.</p>
+        <button onclick="redirectToHome()">Done</button>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = "new1.html";
+            localStorage.clear();
+
+            let totalCount=0;
+            let foodItems = [
+                {
+                    name: "Chapati",
+                    buttonListId :"button1",
+                    price: 100.0,
+                    count: 0,
+                    web: "https://th.bing.com/th/id/OIP.2QoIkJxfhNslsJrY8k2TfAHaFj?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                },
+                {
+                    name: "Ramen bowl",
+                    buttonListId :"button2",
+                    price: 100.0,
+                    count: 0,
+                    web: "https://th.bing.com/th/id/OIP.x-1Rn2BPDZ8QNjTmUbx3QAHaHa?pid=ImgDet&w=200&h=200&c=7&dpr=1.3",
+                },
+                {
+                    name: "Chapati",
+                    buttonListId : "button3",
+                    price: 100.0,
+                    count: 0,
+                    web: "https://th.bing.com/th/id/OIP.2QoIkJxfhNslsJrY8k2TfAHaFj?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                },
+            ];
+
+            localStorage.setItem('foodItems', JSON.stringify(foodItems));
+            localStorage.setItem('totalCount', JSON.stringify(totalCount));
+            
+        }
+    </script>
+</body>
+</html>
